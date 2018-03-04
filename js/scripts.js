@@ -26,7 +26,7 @@ Player.prototype.hold = function() {
 Player.prototype.winner = function() {
   if (this.totalScore >= 100) {
     $(".image").html("<img src='img/200w (1).webp'>")
-    alert(this.playerName + " ,you have won!" + " (" + this.totalScore + " points!)")
+    alert(this.playerName + " ,you have won!" + " (" + this.totalScore + " points!)"+ " Press 'New game'.")
 
   }
 }
