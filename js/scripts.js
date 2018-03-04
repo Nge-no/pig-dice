@@ -44,6 +44,7 @@ Player.prototype.pic = function() {
   } else {
     $(".image").html("<img src='img/download ().jpeg'>");
   }
+
   Player.prototype.newGame = function() {
     this.score = 0;
     this.roundScore = 0;
@@ -68,6 +69,7 @@ $(document).ready(function() {
     player1.playerName = player1Name;
     player2.playerName = player2Name;
   });
+
   $(".reset").click(function(event) {
     event.preventDefault();
     $(".player1").val("");
@@ -84,7 +86,6 @@ $(document).ready(function() {
 
     $("#pre-game").show();
   });
-
 
   $("#roll-player1").click(function() {
     player1.score = rollDice();
