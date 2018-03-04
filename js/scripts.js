@@ -1,14 +1,20 @@
-function getRandomInt() {
-  return Math.floor(Math.random() * (7 - 1)) + 1;
+//Back-end
+function Player(name, score, roundScore, totalScore, hold) {
+  this.name;
+  this.score = 0;
+  this.roundScore = 0;
+  this.totalScore = 0;
+  this.image;
 }
 
-$(document).ready(function() {
-  $("#roll-player1").click(function() {
-    $("#round-score-player1").html(getRandomInt);
-  });
-});
-$(document).ready(function() {
-  $("#roll-player2").click(function() {
-    $("#round-score-player2").html(getRandomInt);
-  });
-});
+function rollDice() {
+  return Math.floor(Math.random() * (7 - 1)) + 1;
+}
+Player.prototype.rollOne = function() {
+  if (this.score === 1) {
+    this.roundScore = 0;
+    alert(this.playerName + " has rolled 1!Next players turn!")
+  } else {
+    this.roundScore += this.score;
+  }
+}
