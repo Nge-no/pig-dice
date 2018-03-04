@@ -68,6 +68,23 @@ $(document).ready(function() {
     player1.playerName = player1Name;
     player2.playerName = player2Name;
   });
+  $(".reset").click(function(event) {
+    event.preventDefault();
+    $(".player1").val("");
+    $(".player2").val("");
+
+    $("#game").hide();
+
+    $("#round-score-player1").empty();
+    $("#total-score-player1").empty();
+    $("#score-player1").empty();
+    $("#round-score-player1").empty();
+    $("#total-score-player2").empty();
+    $("#score-player2").empty();
+
+    $("#pre-game").show();
+  });
+
 
   $("#roll-player1").click(function() {
     player1.score = rollDice();
