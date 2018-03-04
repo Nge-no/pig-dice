@@ -30,6 +30,21 @@ Player.prototype.winner = function() {
 
   }
 }
+Player.prototype.pic = function() {
+  if (this.score === 2) {
+    $(".image").html("<img src='img/die_face_2.png'>")
+  } else if (this.score === 3) {
+    $(".image").html("<img src='img/die_face_3.png'>")
+  } else if (this.score === 4) {
+    $(".image").html("<img src='img/die_face_4.png'>")
+  } else if (this.score === 5) {
+    $(".image").html("<img src='img/die_face_5.png'>")
+  } else if (this.score === 6) {
+    $(".image").html("<img src='img/die_face_6.png'>")
+  } else {
+    $(".image").html("<img src='img/download ().jpeg'>");
+  }
+
 
 $(document).ready(function() {
       $("#roll-player1").click(function() {
