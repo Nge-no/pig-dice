@@ -23,6 +23,13 @@ Player.prototype.hold = function() {
   this.roundScore = 0;
   alert("Next player's turn!")
 }
+Player.prototype.winner = function() {
+  if (this.totalScore >= 100) {
+    $(".image").html("<img src='img/200w (1).webp'>")
+    alert(this.playerName + " ,you have won!" + " (" + this.totalScore + " points!)")
+
+  }
+}
 
 $(document).ready(function() {
       $("#roll-player1").click(function() {
