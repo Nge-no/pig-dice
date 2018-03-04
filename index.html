@@ -11,7 +11,26 @@
 </head>
 
 <body>
-  <h1>PIG DICE</h1>
+  <div class="jumbotron" id="title">
+    <h1><strong>PIG DICE</strong></h1>
+  </div>
+  <!--Player name input forms-->
+  <div id="pre-game">
+    <h3>Enter name</h3>
+    <form id="player1-form">
+      <div class="form-group">
+        <label for="player1">Player 1:</label>
+        <input type="text" class="player1">
+      </div>
+    </form>
+    <form id="player2-form">
+      <div class="form-group">
+        <label for="player2">Player 2:</label>
+        <input type="text" class="player2">
+      </div>
+    </form>
+    <button type="submit" name="button" class="btn-success play" id="play">Let's play!</button>
+  </div>
 
   <div class="row">
     <div class="col-md-6" id="player1">
