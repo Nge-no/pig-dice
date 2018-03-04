@@ -45,28 +45,45 @@ Player.prototype.pic = function() {
     $(".image").html("<img src='img/download ().jpeg'>");
   }
   Player.prototype.newGame = function() {
-      this.score = 0;
-      this.roundScore = 0;
-      this.totalScore = 0;
+    this.score = 0;
+    this.roundScore = 0;
+    this.totalScore = 0;
 
-    }
   }
-
+}
+//Front-end
 $(document).ready(function() {
-      $("#roll-player1").click(function() {
-        player1.score = rollDice();
-        $("#score-player1").html(player1.score);
-        player1.pic();
-        $(".image").html(player1.image);
-        player1.rollOne();
-        $("#round-score-player1").html(player1.roundScore);
-      });
+  $("#roll-player1").click(function() {
+    player1.score = rollDice();
+    $("#score-player1").html(player1.score);
+    player1.pic();
+    $(".image").html(player1.image);
+    player1.rollOne();
+    $("#round-score-player1").html(player1.roundScore);
+  });
 
-      $("#roll-player2").click(function() {
-        player2.score = rollDice();
-        $("#score-player2").html(player2.score);
-        player2.pic();
-        $(".image").html(player2.image);
-        player2.rollOne();
-        $("#round-score-player2").html(player2.roundScore);
-      });
+  $("#roll-player2").click(function() {
+    player2.score = rollDice();
+    $("#score-player2").html(player2.score);
+    player2.pic();
+    $(".image").html(player2.image);
+    player2.rollOne();
+    $("#round-score-player2").html(player2.roundScore);
+  });
+  
+  $("#hold-player1").click(function() {
+    player1.hold();
+    $("#total-score-player1").html(player1.totalScore);
+    $("#round-score-player1").val("");
+    $("#score-player1").val("");
+    player1.winner();
+  });
+
+  $("#hold-player2").click(function() {
+    player2.hold();
+    $("#total-score-player2").text(player2.totalScore);
+    $("#round-score-player2").val("");
+    $("#score-player1").val("");
+    player2.winner();
+  });
+});
