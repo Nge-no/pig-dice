@@ -53,6 +53,22 @@ Player.prototype.pic = function() {
 }
 //Front-end
 $(document).ready(function() {
+  $("button#play").click(function(event) {
+    player1 = new Player(true);
+    player2 = new Player(false);
+    $("#game").show();
+    $("#pre-game").hide();
+
+    var player1Name = $(".player1").val();
+    $("#player1Name").text(player1Name);
+
+    var player2Name = $(".player2").val();
+    $("#player2Name").text(player2Name);
+
+    player1.playerName = player1Name;
+    player2.playerName = player2Name;
+  });
+
   $("#roll-player1").click(function() {
     player1.score = rollDice();
     $("#score-player1").html(player1.score);
@@ -70,7 +86,7 @@ $(document).ready(function() {
     player2.rollOne();
     $("#round-score-player2").html(player2.roundScore);
   });
-  
+
   $("#hold-player1").click(function() {
     player1.hold();
     $("#total-score-player1").html(player1.totalScore);
