@@ -44,7 +44,13 @@ Player.prototype.pic = function() {
   } else {
     $(".image").html("<img src='img/download ().jpeg'>");
   }
+  Player.prototype.newGame = function() {
+      this.score = 0;
+      this.roundScore = 0;
+      this.totalScore = 0;
 
+    }
+  }
 
 $(document).ready(function() {
       $("#roll-player1").click(function() {
