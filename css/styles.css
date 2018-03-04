@@ -4,3 +4,25 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.jumbotron, #pre-game, .reset, #images {
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: #024c82;
+}
+
+#pre-game {
+  background-color: #056cb7;
+}
+
+.reset {
+  background-color: #0686e2;
+}
+#images {
+  margin-top: 2.5%;
+}
+
+#pre-game {
+  position: relative;
+}
